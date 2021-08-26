@@ -18,8 +18,8 @@ class Controller extends BaseController
 
         //TODO; model(DONE)
         //TODO; query
-        $pokemons = Pokemon::get();
-        dd($pokemons);
+        $pokemons = Pokemon::where('name', 'bek')->get();
+//        dd($pokemons);
 
 
 

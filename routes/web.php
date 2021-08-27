@@ -22,9 +22,8 @@ use Illuminate\Support\Facades\Route;
 //    return 'Helloo World';
 //});
 
-Route::get('/', [\App\Http\Controllers\Controller::class, 'helloWorld'])->name('home');
-Route::get('/goodbye',[\App\Http\Controllers\Controller::class, 'sayGoodBye'])->name('bye');
-Route::get('/form',[\App\Http\Controllers\Controller::class, 'form1'])->name('form1');
-Route::post('/form' ,[\App\Http\Controllers\Controller::class, 'handleForm']);
-
+Route::get('/', [\App\Http\Controllers\Controller::class, 'showIndex'])->name('index');
+Route::get('/card',[\App\Http\Controllers\Controller::class, 'getCardDetail'])->name('card');
+Route::get('/contact',[\App\Http\Controllers\Controller::class, 'sendContact'])->name('contact');
+Route::post('/contact' ,[\App\Http\Controllers\Controller::class, 'handleForm']);
 

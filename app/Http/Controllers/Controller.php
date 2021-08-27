@@ -13,22 +13,22 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    public function helloWorld()
+    public function showIndex()
     {
 
         //TODO; model(DONE)
         //TODO; query
         $pokemons = Pokemon::where('name', 'bek')->get();
-//        dd($pokemons);
 
 
 
-        return view('hello');
+
+        return view('index');
     }
 
-    public function sayGoodBye()
+    public function getCardDetail()
     {
-        return view('goodbye');
+        return view('card');
     }
 
     public function form1()
@@ -36,9 +36,15 @@ class Controller extends BaseController
         return view('form');
     }
 
-    public function handleForm(Request $request)
+    public function sendContact()
     {
-        dd($request->all());
+        return view('contact');
+    }
+
+    public function handleForm(){
+
+        return '';
+
     }
 }
 

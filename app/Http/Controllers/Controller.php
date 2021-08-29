@@ -16,9 +16,19 @@ class Controller extends BaseController
     public function showIndex()
     {
 
+
+//        $pdo = new \PDO(
+//            'mysql:host=hostname;dbname=ssldb',
+//            'username',
+//            'password',
+//        );
+
+
+        dd( phpinfo());
         //TODO; model(DONE)
         //TODO; query
-        $pokemons = Pokemon::where('name', 'bek')->get();
+        $pokemon = Pokemon::where('name', 'kadir')->get();
+//        dd($pokemon);
 
 
 

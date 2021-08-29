@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('title')
-    Pokemon
+{{--    {{$pokemon->name}}--}}
 @endsection
 
 
